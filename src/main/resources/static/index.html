@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>QR Code Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+            text-align: center;
+        }
+
+        input[type="text"] {
+            width: 60%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #218838;
+        }
+
+        img {
+            margin-top: 20px;
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+<h1>QR Code Generator</h1>
+<input id="textInput" placeholder="Enter text to generate QR code" type="text"/>
+<button onclick="generateQRCode()">Generate QR Code</button>
+<div id="qrCodeContainer"></div>
+
+<script>
+    function generateQRCode() {
+        const text = document.getElementById('textInput').value;
+        if (text.trim() === '') {
+            alert('Please enter some text');
+            return;
+        }
+
+        fetch(`/generate-qr?text=${encodeURIComponent(text)}`)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Failed to generate QR code');
+                }
+                return response.blob();
+            })
+            .then(blob => {
+                const qrImage = document.createElement('img');
+                qrImage.src = URL.createObjectURL(blob);
+                document.getElementById('qrCodeContainer').innerHTML = '';
+                document.getElementById('qrCodeContainer').appendChild(qrImage);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Failed to generate QR code');
+            });
+    }
+</script>
+</body>
+</html>
