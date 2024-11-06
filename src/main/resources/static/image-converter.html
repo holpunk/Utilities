@@ -53,8 +53,7 @@
         if (response.ok) {
             const blob = await response.blob();
             const url = URL.createObjectURL(blob);
-            const img = `<img src="${url}" alt="Converted Image"/>`;
-            document.getElementById('result').innerHTML = img;
+            document.getElementById('result').innerHTML = `<img src="${url}" alt="Converted Image"/>`;
         } else {
             document.getElementById('result').innerHTML = 'Error converting image.';
         }
