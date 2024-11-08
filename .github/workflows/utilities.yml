@@ -36,4 +36,4 @@ jobs:
       - name: Tag Docker image
         run: |
           docker tag ${{ secrets.DOCKER_USER_NAME }}/my-app:${{ github.sha }} ${{ secrets.DOCKER_USER_NAME }}/my-app:latest
-          docker push ${{ secrets.DOCKER_USER_NAME }}/Utilities:latest
+          docker push ${{ secrets.DOCKER_USER_NAME }}/utilities:latest
