@@ -25,15 +25,15 @@ jobs:
       # Build the Docker image
       - name: Build Docker image
         run: |
-          docker build -t ${{ secrets.DOCKER_USER_NAME }}/my-app:${{ github.sha }} .
+          docker build -t ${{ secrets.DOCKER_USER_NAME }}/utilities:${{ github.sha }} .
 
       # Push the Docker image
       - name: Push Docker image
         run: |
-          docker push ${{ secrets.DOCKER_USER_NAME }}/my-app:${{ github.sha }}
+          docker push ${{ secrets.DOCKER_USER_NAME }}/utilities:${{ github.sha }}
 
       # (Optional) Tag the image with a version or latest
       - name: Tag Docker image
         run: |
-          docker tag ${{ secrets.DOCKER_USER_NAME }}/my-app:${{ github.sha }} ${{ secrets.DOCKER_USER_NAME }}/my-app:latest
+          docker tag ${{ secrets.DOCKER_USER_NAME }}/utilities:${{ github.sha }} ${{ secrets.DOCKER_USER_NAME }}/utilities:latest
           docker push ${{ secrets.DOCKER_USER_NAME }}/utilities:latest
