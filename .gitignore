@@ -1,0 +1,34 @@
+# IntelliJ IDEA specific files
+.idea/
+*.iml
+*.iws
+
+# macOS specific files
+.DS_Store
+
+# Logs
+logs/
+*.log
+
+# Compiled class files
+*.class
+
+# Maven specific files
+target/
+
+# Gradle specific files
+.gradle/
+build/
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+
+# Ignore node_modules if using Node.js
+node_modules/
+
+# Ignore Python virtual environments
+venv/
+__pycache__/
+*.pyc
