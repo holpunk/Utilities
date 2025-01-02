@@ -1,4 +1,4 @@
-package com.akki.practice.component.qrcodegenerator.service;
+package com.akki.utilities.service;
 
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.WriterException;

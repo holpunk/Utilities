@@ -8,24 +8,11 @@
         <version>3.3.5</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.akki.practice.component</groupId>
+    <groupId>com.akki.utilities</groupId>
     <artifactId>Utilities</artifactId>
     <version>0.0.1</version>
     <name>Utilities</name>
     <description>Utilities</description>
-    <url/>
-    <licenses>
-        <license/>
-    </licenses>
-    <developers>
-        <developer/>
-    </developers>
-    <scm>
-        <connection/>
-        <developerConnection/>
-        <tag/>
-        <url/>
-    </scm>
     <properties>
         <java.version>23</java.version>
     </properties>

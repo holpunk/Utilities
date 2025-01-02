@@ -1,4 +1,4 @@
-package com.akki.practice.component.qrcodegenerator;
+package com.akki.utilities.qrcodegenerator;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

@@ -1,6 +1,6 @@
-package com.akki.practice.component.qrcodegenerator.controller;
+package com.akki.utilities.controller;
 
-import com.akki.practice.component.qrcodegenerator.service.QRCodeGeneratorService;
+import com.akki.utilities.service.QRCodeGeneratorService;
 import com.google.zxing.WriterException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;

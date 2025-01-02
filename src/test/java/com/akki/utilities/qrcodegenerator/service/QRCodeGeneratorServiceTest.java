@@ -1,5 +1,6 @@
-package com.akki.practice.component.qrcodegenerator.service;
+package com.akki.utilities.qrcodegenerator.service;
 
+import com.akki.utilities.service.QRCodeGeneratorService;
 import com.google.zxing.WriterException;
 import org.junit.jupiter.api.Test;
 
