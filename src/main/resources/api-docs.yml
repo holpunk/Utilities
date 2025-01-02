@@ -1,0 +1,27 @@
+openapi: 3.0.1
+info:
+  title: Utilities Application API
+  description: API documentation for the Utilities Application
+  version: 1.0
+paths:
+  /generate-qr:
+    get:
+      tags:
+        - QRCodeController
+      summary: Generate QR Code
+      operationId: generateQRCode
+      parameters:
+        - name: text
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            image/png:
+              schema:
+                type: string
+                format: binary
+components: {}
