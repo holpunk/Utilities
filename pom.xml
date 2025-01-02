@@ -9,13 +9,8 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.akki.utilities</groupId>
-    <artifactId>Utilities</artifactId>
+    <artifactId>UtilitiesApplication</artifactId>
     <version>0.0.1</version>
-    <name>Utilities</name>
-    <description>Utilities</description>
-    <properties>
-        <java.version>23</java.version>
-    </properties>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
