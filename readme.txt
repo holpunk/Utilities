@@ -7,3 +7,4 @@ This is a simple script to create a self-signed certificate for localhost or any
 create certificate from keystore in order to send request to server:
 
     keytool -export -alias youralias -keystore path/to/your/keystore.jks -file path/to/your/certificate.crt
+    keytool -import -v -trustcacerts -alias youralias -file path/to/your/certificate.crt -keystore path/to/your/truststore.jks -keypass password -storepass password
